@@ -1,0 +1,17 @@
+<div class="bubbles">
+    <div class="bubbles-wrapper">
+        <div class="bubble-left">
+            <div class="bubble-info">
+                <span>Consumption</span>
+                <span> {{ consumptionValue }} kWh</span>
+            </div>
+        </div>
+        <div class="bubble-right">
+            <div class="bubble-info">
+                <span>Generation</span>
+                <span> {{ generationValue }} kWh</span>
+            </div>
+        </div>
+    </div>
+    <p>Generation is <span> {{ (generationValue * 100) / consumptionValue }}%</span> of Consumption</p>
+</div>
