@@ -1,7 +1,7 @@
 <div class="app-parent">
-  Consumption: <input [(ngModel)]="consumption" [ngModelOptions]="{ updateOn: 'blur'}" />
-  Generation: <input [(ngModel)]="generation" [ngModelOptions]="{ updateOn: 'blur'}" /> 
+  Consumption: <input [(ngModel)]="consumption" />
+  Generation: <input [(ngModel)]="generation" /> 
 </div>
-
+<!-- <p>{{ consumption }} {{ generation }}</p> -->
 <app-bubbles [consumptionValue]="consumption"
              [generationValue]="generation"></app-bubbles>

@@ -1,12 +1,16 @@
 <div class="bubbles">
     <div class="bubbles-wrapper">
-        <div class="bubble-left">
+        <div class="bubble-left bubble--circle"
+             [style.width.px]="(consumptionValue / generationValue) * 100"
+             [style.height.px]="(consumptionValue / generationValue) * 100">
             <div class="bubble-info">
                 <span>Consumption</span>
                 <span> {{ consumptionValue }} kWh</span>
             </div>
         </div>
-        <div class="bubble-right">
+        <div class="bubble-right bubble--circle" 
+             [style.width.px]="(((consumptionValue / generationValue) * 100) / consumptionValue) * generationValue"
+             [style.height.px]="(((consumptionValue / generationValue) * 100) / consumptionValue) * generationValue">
             <div class="bubble-info">
                 <span>Generation</span>
                 <span> {{ generationValue }} kWh</span>
