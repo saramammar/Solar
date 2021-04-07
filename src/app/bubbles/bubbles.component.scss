@@ -27,9 +27,20 @@ $text-size: 1.3rem;
             position: absolute;
             border-bottom: 1px solid $pale-blue;
 
+            &:after {
+                content: '';
+                width: 1px;
+                height: 30px;
+                background: $pale-blue;
+                position: absolute;
+                bottom: 0;
+                transform-origin: top;
+            }
+
             span {
                 &:last-child {
                     @extend %focus-text;
+                    white-space: nowrap;
                 }
             }
         }
@@ -39,7 +50,12 @@ $text-size: 1.3rem;
             z-index: 2;
 
             .bubble-info {
-                transform: translate(-110px, -30px);
+                transform: translate(-110px, -40px);
+
+                &:after {
+                    right: 0;
+                    transform: rotate(-45deg) translate(-21px, 22px);
+                }
             }
         }
 
@@ -49,7 +65,12 @@ $text-size: 1.3rem;
             z-index: 1;
 
             .bubble-info {
-                transform: translate(110px, -30px);
+                transform: translate(110px, -40px);
+
+                &:after {
+                    left: 0;
+                    transform: rotate(45deg) translate(21px, 22px);
+                }
             }
         }
     }
